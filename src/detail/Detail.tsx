@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 import Header from "../common/Header";
 import DetailTop from "./components/DetailTop";
+import DetailInfo from "./components/DetailInfo";
+import DetailRecruit from "./components/DetailRecruit";
+import DetailComments from "./components/DetailComments";
 
 const Detail: React.FC = () => {
   const DetailTopProps = {
@@ -18,6 +21,9 @@ const Detail: React.FC = () => {
       <Header />
       <DetailWrap>
         <DetailTop {...DetailTopProps} />
+        <DetailInfo />
+        <DetailRecruit />
+        <DetailComments />
       </DetailWrap>
     </>
   );

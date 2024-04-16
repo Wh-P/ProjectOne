@@ -32,7 +32,8 @@ const DetailTop: React.FC<DetailTopProps> = ({
   );
 };
 const DetailTopWrap = styled.div`
-  border: 1px solid red;
+  padding: 20px 0;
+  border-bottom: 3px solid #f2f2f2;
 `;
 
 const BtnBack = styled(Link)`
