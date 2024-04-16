@@ -1,10 +1,12 @@
 import "./App.css";
+import Mainpage from "./main/Mainpage";
 
 function App() {
   return (
-    <div className="App">
-      <img src="https://holaworld.io/images/logo/new-logo.png" alt="" />
-    </div>
+    <Mainpage></Mainpage>
+    // <div className="App">
+    //   <img src="https://holaworld.io/images/logo/new-logo.png" alt="" />
+    // </div>
   );
 }
 
