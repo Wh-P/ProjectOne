@@ -1,16 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const Nav = () => {
+const Header = () => {
   return (
     <Fragment>
       <Logo>
         <img src="https://holaworld.io/images/logo/new-logo.png" />
       </Logo>
       <NavBar>
-        <button>
-          <div>새 글 쓰기</div>
-        </button>
+        <button>새 글 쓰기</button>
         <button>
           <img src="https://holaworld.io/images/info/notification.svg" />
         </button>
@@ -22,7 +20,7 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Header;
 
 const Fragment = styled.div`
   display: flex;
@@ -43,5 +41,8 @@ const NavBar = styled.div`
   .navBar-icon {
     width: 32px;
     height: 32px;
+    > img {
+      width: 100%;
+    }
   }
 `;

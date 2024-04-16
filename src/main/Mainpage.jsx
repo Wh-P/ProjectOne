@@ -1,10 +1,10 @@
 import React from "react";
-import Nav from "./components/Nav";
+import Header from "../common/Header";
 
 const Mainpage = () => {
   return (
     <>
-      <Nav />
+      <Header />
       {/* <Slider />
       <Hottest />
       <Main />

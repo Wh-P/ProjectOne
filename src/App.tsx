@@ -1,13 +1,15 @@
 import "./App.css";
+import React from "react";
+import Header from "./common/Header";
 import Mainpage from "./main/Mainpage";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <Mainpage></Mainpage>
-    // <div className="App">
-    //   <img src="https://holaworld.io/images/logo/new-logo.png" alt="" />
-    // </div>
+    <div className="App">
+      <Header />
+      <Mainpage />
+    </div>
   );
-}
+};
 
 export default App;
