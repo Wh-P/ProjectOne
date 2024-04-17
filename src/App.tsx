@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./common/Header";
 import Mainpage from "./main/Mainpage";
 import Detail from "./detail/Detail";
-
+import Register from "./register/components/Register";
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -13,6 +13,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Mainpage />} />
         <Route path="/detail" element={<Detail />} />
         {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/register" element = {<Register/>}/>
       </Routes>
     </div>
   );
