@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Header = () => {
   return (
-    <Fragment>
+    <Fragments>
       <Logo>
         <img src="https://holaworld.io/images/logo/new-logo.png" />
       </Logo>
@@ -16,13 +16,13 @@ const Header = () => {
           <img src="https://hola-post-image.s3.ap-northeast-2.amazonaws.com/default.PNG" />
         </button>
       </NavBar>
-    </Fragment>
+    </Fragments>
   );
 };
 
 export default Header;
 
-const Fragment = styled.div`
+const Fragments = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
