@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import Header from "../common/Header";
 import DetailTop from "./components/DetailTop";
 import DetailInfo from "./components/DetailInfo";
 import DetailRecruit from "./components/DetailRecruit";
@@ -18,7 +17,6 @@ const Detail: React.FC = () => {
 
   return (
     <>
-      <Header />
       <DetailWrap>
         <DetailTop {...DetailTopProps} />
         <DetailInfo />
