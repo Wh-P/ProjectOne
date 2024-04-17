@@ -8,7 +8,7 @@ const Header = () => {
         <img src="https://holaworld.io/images/logo/new-logo.png" />
       </Logo>
       <NavBar>
-        <button>새 글 쓰기</button>
+        <a href="/register"><button>새 글 쓰기</button></a>
         <button>
           <img src="https://holaworld.io/images/info/notification.svg" />
         </button>
