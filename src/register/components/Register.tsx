@@ -127,9 +127,9 @@ const RegisterDivs = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     margin:20px;
+
   }
 `;
-
 const RegisterSectionTwo = styled.div`
   display: flex;
   align-items: center;
@@ -165,7 +165,7 @@ const DraftSection = styled.section`
 const DraftSectiondiv = styled.div`
   margin:20px;
   width:94%;
-`
+`;
 
 const DraftSectionLabel = styled.label`
   font-weight:bold;
