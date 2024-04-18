@@ -1,0 +1,19 @@
+.custom-datepicker{
+    margin-top: 10px;
+    box-sizing: border-box;
+    width: 480px;
+    height: 38px;
+    padding: 2px 8px;
+    border: 1px solid rgb(214,214,214);
+    border-radius: 4px;
+}
+.custom-datepicker:hover{
+    border-color: rgb(204,204,204);
+}
+@media (max-width: 768px) {
+ .custom-datepicker{
+    width: 100%;
+ }
+  }
+
+

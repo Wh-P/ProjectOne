@@ -1,10 +1,9 @@
-import React , {useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import SelectComponent from "./Select";
+import Datepicker from "./Datepicker";
 
-
-const Register= () => {
-  
+const Register = () => {
   const options = [
     { value: "option1", label: "Option 1" },
     { value: "option2", label: "Option 2" },
@@ -12,24 +11,66 @@ const Register= () => {
   ];
   return (
     <RegisterDiv>
-      <RegisterSecion>
-        <RegisterSectionOne>
-          <SpanSectionOne>1</SpanSectionOne>
-          <FontSectionOne>프로젝트 기본 정보를 입력해주세요.</FontSectionOne>
-        </RegisterSectionOne>
-        <RegisterUl>
-        <SelectComponent options={options} title={'스터디'} label={"모집 구분"}/>
-        <SelectComponent options={options} title={'스터디'} label={"모집 인원"}/>
-        </RegisterUl>
-        <RegisterUl>
-        <SelectComponent options={options} title={'스터디'} label={"진행 방식"}/>
-        <SelectComponent options={options} title={'스터디'} label={"진행 기간"}/>
-        </RegisterUl>
-        <RegisterUl>
-        <SelectComponent options={options} title={'스터디'} label={"기술 스택"}/>
-        
-        </RegisterUl>
-      </RegisterSecion>
+      <RegisterSectionOne>
+        <SpanSectionOne>1</SpanSectionOne>
+        <FontSectionOne>프로젝트 기본 정보를 입력해주세요.</FontSectionOne>
+      </RegisterSectionOne>
+      <RegisterUl>
+        <SelectComponent
+          options={options}
+          title={"스터디"}
+          label={"모집 구분"}
+        />
+        <SelectComponent
+          options={options}
+          title={"스터디"}
+          label={"모집 인원"}
+        />
+      </RegisterUl>
+      <RegisterUl>
+        <SelectComponent
+          options={options}
+          title={"스터디"}
+          label={"진행 방식"}
+        />
+        <SelectComponent
+          options={options}
+          title={"스터디"}
+          label={"진행 기간"}
+        />
+      </RegisterUl>
+      <RegisterUl>
+        <SelectComponent
+          options={options}
+          title={"스터디"}
+          label={"기술 스택"}
+        />
+        <Datepicker />
+      </RegisterUl>
+      <RegisterUl>
+        <SelectComponent
+          options={options}
+          title={"스터디"}
+          label={"모집 포지션"}
+        />
+        <li>
+          <SelectComponent
+            options={options}
+            title={"스터디"}
+            label={"연락 방법"}
+          />
+          <StyledInput type="text" placeholder="오픈 카톡방 링크" />
+        </li>
+      </RegisterUl>
+
+      <RegisterSectionTwo>
+        <SpanSectionOne>2</SpanSectionOne>
+        <FontSectionOne>프로젝트 기본 정보를 입력해주세요.</FontSectionOne>
+      </RegisterSectionTwo>
+      <DraftSection>
+        <DraftSectionLabel>제목</DraftSectionLabel>
+        <DraftSectionInput type="text" placeholder="글 제목을 입력해주세요!"></DraftSectionInput>
+      </DraftSection>
     </RegisterDiv>
   );
 };
@@ -44,8 +85,6 @@ const RegisterDiv = styled.div`
   margin: 0px auto;
   max-width: 1040px;
 `;
-
-const RegisterSecion = styled.section``;
 
 const RegisterSectionOne = styled.div`
   display: flex;
@@ -77,19 +116,58 @@ const FontSectionOne = styled.h2`
 `;
 
 const RegisterUl = styled.ul`
-  display:flex;
+  display: flex;
   justify-content: space-between;
   margin-top: 40px;
   box-sizing: border-box;
-  @media (max-width:300px){
-    width:100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    & > li {
+      width: 100%;
+      margin-top: 20px;
+    }
   }
 `;
 
-const CalendarWrapper = styled.div`
-  position: relative;
+const RegisterSectionTwo = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 16px;
+  margin-top: 60px;
+  margin-bottom: 36px;
+  border-bottom: 2.4px solid rgb(242, 242, 242);
 `;
 
-const CalendarWrapperContent = styled.div`
-  cursor: pointer;
+const StyledInput = styled.input`
+  width: 100%;
+  height: 40px;
+  margin-top:20px;
+  margin-left: auto;
+  padding: 2px 8px;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 4px;
+  @media (max-width: 768px) {
+    width: calc(100%);
+  }
 `;
+
+const DraftSection = styled.section`
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+`;
+const DraftSectionLabel = styled.label`
+  font-weight:bold;
+  margin-bottom:5px;
+`;
+
+const DraftSectionInput =styled.input`
+  width:100%;
+  height:56px;
+  margin:0px 8px 0px 0px;
+  padding: 0px 52px 0px 16px;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius:5px;
+`

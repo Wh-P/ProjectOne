@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import styled from "styled-components";
+import './Select.css'
 type Option = {
   value: string;
   label: string;
@@ -19,6 +20,8 @@ const MySelect: React.FC<DropDownProps> = ({ options, title, label }) => {
     setSelectedOption(selectedOption);
   };
 
+
+
   return (
     <Li>
       <LiFontSize>{label}</LiFontSize>
@@ -28,6 +31,7 @@ const MySelect: React.FC<DropDownProps> = ({ options, title, label }) => {
         value={selectedOption}
         onChange={handleChange}
         placeholder={`${title.toLowerCase()}`}
+        className="select-custom"
       />
       </SelectDiv>
     </Li>
@@ -39,9 +43,9 @@ export default MySelect;
 const Li = styled.li`
   box-sizing: border-box;
   width: 480px;
-  height:70px;
-  @media (max-width: 300px) {
-    width: 100%;
+  height:56px;
+  @media (max-width: 768px){
+    width:100%;
   }
 `;
 
