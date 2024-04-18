@@ -14,6 +14,8 @@ const Detail: React.FC = () => {
     writerName: "캐럿",
     writeDate: "2024.04.11",
   };   
+
+
   
 
   return (
