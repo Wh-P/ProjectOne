@@ -68,8 +68,10 @@ const Register = () => {
         <FontSectionOne>프로젝트 기본 정보를 입력해주세요.</FontSectionOne>
       </RegisterSectionTwo>
       <DraftSection>
+        <DraftSectiondiv>
         <DraftSectionLabel>제목</DraftSectionLabel>
         <DraftSectionInput type="text" placeholder="글 제목을 입력해주세요!"></DraftSectionInput>
+        </DraftSectiondiv>
       </DraftSection>
     </RegisterDiv>
   );
@@ -125,9 +127,9 @@ const RegisterDivs = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     margin:20px;
+
   }
 `;
-
 const RegisterSectionTwo = styled.div`
   display: flex;
   align-items: center;
@@ -155,7 +157,16 @@ const DraftSection = styled.section`
   display: flex;
   align-items: start;
   flex-direction: column;
+  .dDXAvR{
+    margin:20px;
+  }
 `;
+
+const DraftSectiondiv = styled.div`
+  margin:20px;
+  width:94%;
+`;
+
 const DraftSectionLabel = styled.label`
   font-weight:bold;
   margin-bottom:5px;
@@ -164,7 +175,7 @@ const DraftSectionLabel = styled.label`
 const DraftSectionInput =styled.input`
   width:100%;
   height:56px;
-  margin:0px 8px 0px 0px;
+  margin:10px 8px 0px 0px;
   padding: 0px 52px 0px 16px;
   border: 1px solid rgb(224, 224, 224);
   border-radius:5px;
