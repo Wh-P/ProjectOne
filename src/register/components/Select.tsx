@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import styled from "styled-components";
+
 type Option = {
   value: string;
   label: string;
@@ -12,6 +13,7 @@ type DropDownProps = {
   label: string;
 };
 
+
 const MySelect: React.FC<DropDownProps> = ({ options, title, label }) => {
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
@@ -19,37 +21,47 @@ const MySelect: React.FC<DropDownProps> = ({ options, title, label }) => {
     setSelectedOption(selectedOption);
   };
 
+  const customStyles = {
+    control: (provided:any) => ({
+      ...provided,
+      height: '100%',
+    }),
+  };
+  
+
   return (
-    <Li>
+    <Selectdiv>
       <LiFontSize>{label}</LiFontSize>
-      <SelectDiv>
       <Select
         options={options}
         value={selectedOption}
         onChange={handleChange}
         placeholder={`${title.toLowerCase()}`}
+        className="select-custom"
+        styles={customStyles}
       />
-      </SelectDiv>
-    </Li>
+      
+    </Selectdiv>
   );
 };
 
 export default MySelect;
 
-const Li = styled.li`
+const Selectdiv = styled.div`
   box-sizing: border-box;
-  width: 480px;
-  height:70px;
-  @media (max-width: 300px) {
-    width: 100%;
+  display:flex;
+  flex-direction:column;
+  row-gap:10px;
+  width: 49%;
+  @media (max-width: 768px){
+    width:100%;
+  }
+  .select-custom{
+    height:60px !important;
   }
 `;
 
 const LiFontSize = styled.label`
   font-weight: bold;
-  margin-bottom 5px;
+  margin-top:15px;
 `;
-
-const SelectDiv = styled.div`
-  margin:10px 0px;
-`
