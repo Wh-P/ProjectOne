@@ -14,6 +14,7 @@ const App: React.FC = () => {
         <Route path="/detail" element={<Detail />} />
         <Route path="/register" element={<Register />} />
         {/* TODO 우혁 git test */}
+        {/* TODO 우혁 git test 두번째*/}
       </Routes>
     </div>
   );
