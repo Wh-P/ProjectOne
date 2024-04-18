@@ -34,6 +34,15 @@ const DetailTop: React.FC<DetailTopProps> = ({
 const DetailTopWrap = styled.div`
   padding: 20px 0;
   border-bottom: 3px solid #f2f2f2;
+  h1 {
+    margin-top: 40px;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 126.5%;
+    letter-spacing: -0.005em;
+    color: #000;
+    overflow-wrap: break-word;
+  }
 `;
 
 const BtnBack = styled(Link)`
