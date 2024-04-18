@@ -8,29 +8,31 @@ const Datepicker: React.FC = () => {
   const [selectDate, setSelectDate] = useState<Date | null>(null);
 
   return (
-    <li>
-      <Datediv>
+    <Datediv>
         <Datelabel>모집 마감일</Datelabel>
         <ReactDatePicker
           selected={selectDate as Date}
           onChange={(date: Date | null) => setSelectDate(date)}
           className="custom-datepicker"
         />
-      </Datediv>
-    </li>
+    </Datediv>
   );
 };
 
 export default Datepicker;
 
 const Datediv = styled.div`
-  width: 100%;
+  width: 49%;
   height: 70px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+       width: 100%;
+     }
 `;
 
 const Datelabel = styled.label`
     font-weight:bold;
+    margin-top:15px;
 `

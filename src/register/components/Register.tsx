@@ -15,7 +15,7 @@ const Register = () => {
         <SpanSectionOne>1</SpanSectionOne>
         <FontSectionOne>프로젝트 기본 정보를 입력해주세요.</FontSectionOne>
       </RegisterSectionOne>
-      <RegisterUl>
+      <RegisterDivs>
         <SelectComponent
           options={options}
           title={"스터디"}
@@ -26,8 +26,8 @@ const Register = () => {
           title={"스터디"}
           label={"모집 인원"}
         />
-      </RegisterUl>
-      <RegisterUl>
+      </RegisterDivs>
+      <RegisterDivs>
         <SelectComponent
           options={options}
           title={"스터디"}
@@ -38,30 +38,30 @@ const Register = () => {
           title={"스터디"}
           label={"진행 기간"}
         />
-      </RegisterUl>
-      <RegisterUl>
+      </RegisterDivs>
+      <RegisterDivs>
         <SelectComponent
           options={options}
           title={"스터디"}
           label={"기술 스택"}
         />
         <Datepicker />
-      </RegisterUl>
-      <RegisterUl>
+      </RegisterDivs>
+      <RegisterDivs>
         <SelectComponent
           options={options}
           title={"스터디"}
           label={"모집 포지션"}
         />
-        <li>
+        
           <SelectComponent
             options={options}
             title={"스터디"}
             label={"연락 방법"}
           />
           <StyledInput type="text" placeholder="오픈 카톡방 링크" />
-        </li>
-      </RegisterUl>
+        
+      </RegisterDivs>
 
       <RegisterSectionTwo>
         <SpanSectionOne>2</SpanSectionOne>
@@ -91,6 +91,7 @@ const RegisterSectionOne = styled.div`
   align-items: center;
   flex-direction: row;
   padding: 16px;
+  margin-top:10px;
   margin-bottom: 36px;
   border-bottom: 2.4px solid rgb(242, 242, 242);
 `;
@@ -115,18 +116,15 @@ const FontSectionOne = styled.h2`
   letter-spacing: -0.05em;
 `;
 
-const RegisterUl = styled.ul`
+const RegisterDivs = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 40px;
   box-sizing: border-box;
   @media (max-width: 768px) {
     flex-direction: column;
-
-    & > li {
-      width: 100%;
-      margin-top: 20px;
-    }
+    margin:20px;
   }
 `;
 
@@ -141,8 +139,8 @@ const RegisterSectionTwo = styled.div`
 `;
 
 const StyledInput = styled.input`
-  width: 100%;
-  height: 40px;
+  width: 49%;
+  height: 60px;
   margin-top:20px;
   margin-left: auto;
   padding: 2px 8px;
