@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         </Link>
       </Logo>
       <NavBar>
-        {/* Todo 경로 수정필요 */}
+        
         <Link to="/register">
           <button>새 글 쓰기</button>
         </Link>
