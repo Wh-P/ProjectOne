@@ -13,6 +13,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Mainpage />} />
         <Route path="/detail" element={<Detail />} />
         <Route path="/register" element={<Register />} />
+        {/* TODO 우혁 git test */}
       </Routes>
     </div>
   );
