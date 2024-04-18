@@ -67,6 +67,7 @@ const Category = styled.strong`
   font-size: 1.2rem;
   color: #717171;
   margin-right: 36px;
+  font-weight: bold;
 `;
 
 const CategoryInfo = styled.strong`
