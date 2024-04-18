@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const DetailRecruit: React.FC = () => {
   return (
-    <div>
+    <DetailRecruitWrap>
       <Subject>
         <h2>프로젝트 소개</h2>
       </Subject>
@@ -19,9 +19,15 @@ const DetailRecruit: React.FC = () => {
         <br /> <br /> <br />
         https://open.kakao.com/o/sCtGRvlg
       </Description>
-    </div>
+    </DetailRecruitWrap>
   );
 };
+
+const DetailRecruitWrap = styled.div`
+  @media screen and (max-width: 768px) {
+    padding: 30px 20px;
+  }
+`;
 
 const Subject = styled.div`
   h2 {
@@ -31,6 +37,11 @@ const Subject = styled.div`
     font-weight: 700;
     padding-bottom: 24px;
     border-bottom: 3px solid #f2f2f2;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      padding-bottom: 0;
+      border: none;
+    }
   }
 `;
 
@@ -38,8 +49,13 @@ const Description = styled.p`
   width: 100%;
   margin: 40px auto 0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.25rem;
   line-height: 1.6;
+  @media screen and (max-width: 768px) {
+    font-weight: normal;
+    font-size: 0.8rem;
+    margin: 20px auto;
+  }
 `;
 
 export default DetailRecruit;

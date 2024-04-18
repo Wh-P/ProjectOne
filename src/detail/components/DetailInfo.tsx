@@ -39,22 +39,42 @@ const SampleInfoData = [
 const DetailInfo: React.FC = () => {
   return (
     <InfoItemWrap>
-      {SampleInfoData.map((item, index) => (
-        <InfoItem key={index}>
-          <Category>{item.category}:</Category>
-          <CategoryInfo>{item.value}</CategoryInfo>
-        </InfoItem>
-      ))}
+      <InfoItemInner>
+        {SampleInfoData.map((item, index) => (
+          <InfoItem key={index}>
+            <Category>{item.category}:</Category>
+            <CategoryInfo>{item.value}</CategoryInfo>
+          </InfoItem>
+        ))}
+      </InfoItemInner>
     </InfoItemWrap>
   );
 };
 
 const InfoItemWrap = styled.div`
+  margin: 60px auto;
+  @media screen and (max-width: 768px) {
+    background: rgb(249, 249, 249);
+    margin: auto;
+    padding: 16px;
+  }
+`;
+
+const InfoItemInner = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  margin: 60px auto;
+  margin: 0 auto;
   row-gap: 24px;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+
+    row-gap: 8px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fff;
+  }
 `;
 
 const InfoItem = styled.div`
@@ -68,11 +88,18 @@ const Category = styled.strong`
   color: #717171;
   margin-right: 36px;
   font-weight: bold;
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
 `;
 
 const CategoryInfo = styled.strong`
   font-size: 1.2rem;
   color: #333;
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export default DetailInfo;

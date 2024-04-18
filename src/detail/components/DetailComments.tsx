@@ -23,16 +23,24 @@ const DetailCommentsWrap = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-top: 100px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+    margin-top: 50px;
+  }
 `;
 
 const Top = styled.div`
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 10px;
   strong {
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
 
@@ -44,6 +52,10 @@ const Content = styled.div`
     display: block;
     width: 44px;
     height: 44px;
+    @media screen and (max-width: 768px) {
+      width: 24px;
+      height: 24px;
+    }
   }
   > textarea {
     border-radius: 30px;
@@ -61,14 +73,25 @@ const Bottom = styled.div`
   display: flex;
   justify-content: flex-end;
   margin: 16px 0 24px;
+  @media screen and (max-width: 768px) {
+    margin: 8px 0 12px;
+  }
 `;
 const BtnWrite = styled.button`
-  padding: 12px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
   height: 40px;
   background: #333;
   border-radius: 50px;
   font-weight: 700;
   color: #fff;
-  font-size: 16px;
+  font-size: 1.25rem;
+  @media screen and (max-width: 768px) {
+    width: 90px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
 `;
 export default DetailComments;
