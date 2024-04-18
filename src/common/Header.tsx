@@ -18,6 +18,7 @@ const Header: React.FC = () => {
       <NavBar>
         
         <Link to="/register">
+          
           <button>새 글 쓰기</button>
         </Link>
         <NavBarAlarm
