@@ -34,7 +34,7 @@ const Banner: React.FC = () => {
     },
   ];
 
-  var setSlider = {
+  const setSlider = {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,

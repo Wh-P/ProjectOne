@@ -10,15 +10,11 @@ const Header: React.FC = () => {
 
   return (
     <HeaderWrap>
-      <Logo>
-        <Link to="/">
-          <img src="https://holaworld.io/images/logo/new-logo.png" />
-        </Link>
+      <Logo to="/">
+        <img src="https://holaworld.io/images/logo/new-logo.png" />
       </Logo>
       <NavBar>
-        <Link to="/register">
-          <button>새 글 쓰기</button>
-        </Link>
+        <NewBtn to="/register"> 새 글 쓰기</NewBtn>
         <HeaderNavBarAlarm
           alarmDropBar={alarmDropBar}
           setAlarmDropBar={setalarmDropBar}
@@ -45,7 +41,7 @@ const HeaderWrap = styled.div`
   height: 85px;
 `;
 
-const Logo = styled.button`
+const Logo = styled(Link)`
   cursor: pointer;
   margin: 10px;
   width: 105px;
@@ -58,10 +54,13 @@ const NavBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 800;
   font-size: 1.125rem;
   gap: 30px;
-  button {
-    cursor: pointer;
-  }
+`;
+
+const NewBtn = styled(Link)`
+  cursor: pointer;
+  color: black;
+  font-weight: 800;
+  text-decoration: none;
 `;
