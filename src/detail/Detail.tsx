@@ -13,7 +13,10 @@ const Detail: React.FC = () => {
       "https://hola-post-image.s3.ap-northeast-2.amazonaws.com/default.PNG",
     writerName: "캐럿",
     writeDate: "2024.04.11",
-  };
+  };   
+
+
+  
 
   return (
     <>

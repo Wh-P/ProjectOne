@@ -51,13 +51,13 @@ const Selectdiv = styled.div`
   box-sizing: border-box;
   display:flex;
   flex-direction:column;
-  row-gap:10px;
+  gap:10px;
   width: 49%;
   @media (max-width: 768px){
     width:100%;
   }
   .select-custom{
-    height:60px !important;
+    height:56px !important;
   }
 `;
 
