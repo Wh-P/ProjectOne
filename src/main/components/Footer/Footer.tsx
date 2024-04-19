@@ -56,7 +56,6 @@ const FooterLeftCover = styled.div`
   flex-direction: column;
   width: 30%;
   img {
-    display: block;
     width: 60px;
     height: 15px;
     margin-bottom: 32px;
@@ -70,6 +69,9 @@ const FooterLeftCover = styled.div`
     letter-spacing: -0.2px;
     color: #777;
   }
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const FooterRightCover = styled.div`
@@ -79,6 +81,7 @@ const FooterRightCover = styled.div`
   line-height: 17px;
   align-items: center;
   margin-top: 20px;
+  min-width: 435px;
 `;
 
 const FooterRightLink = styled(Link)`

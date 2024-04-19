@@ -90,13 +90,14 @@ const MainState = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  max-width: 1300px;
 `;
 
 const MainStateDropFilter = styled.button`
   justify-content: space-between;
   padding-left: 18px;
   padding-right: 10px;
-  width: 140px;
+  min-width: 140px;
   height: 38px;
   border: 1px solid rgb(227, 227, 227);
   color: rgb(100, 100, 100);
@@ -111,6 +112,7 @@ const MainStateDropFilter = styled.button`
 
 const MainStateButtonFilter = styled.button`
   display: flex;
+  min-width: 166px;
   height: 38px;
   padding: 0px 22px;
   justify-content: center;
@@ -134,7 +136,6 @@ const MainSearch = styled.div`
   background: #f5f5f5;
   border: none;
   img {
-    display: block;
     width: 18px;
     height: 18px;
   }
@@ -146,5 +147,8 @@ const MainSearch = styled.div`
     font-weight: 550;
     font-size: 16px;
     width: 100%;
+  }
+  @media screen and (max-width: 1200px) {
+    display: none;
   }
 `;
