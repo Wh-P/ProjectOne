@@ -26,6 +26,29 @@ const Trending: React.FC = () => {
     waitForAnimate: false,
     autoplay: false,
     infinite: false,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -67,8 +90,16 @@ const Trending: React.FC = () => {
 };
 
 const TrendingWrap = styled.div`
+  width: 100%;
   max-width: 1300px;
+  padding: 7px 15px;
   margin: 100px auto 60px;
+  @media screen and (max-width: 1300px) {
+    max-width: 980px;
+  }
+  @media screen and (max-width: 980px) {
+    max-width: 630px;
+  }
 `;
 const TrendingHeader = styled.div`
   display: flex;
@@ -88,10 +119,12 @@ const TrendingArrow = styled.div`
   display: flex;
   gap: 6px;
   img {
-    display: block;
     width: 30px;
     height: 30px;
     cursor: pointer;
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
   }
 `;
 

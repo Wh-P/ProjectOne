@@ -90,6 +90,19 @@ const MainContentsWrap = styled.ul`
   margin: 0 auto;
   padding: 0 20px;
   list-style: none;
+  justify-content: center;
+  @media screen and (max-width: 1300px) {
+    max-width: 1000px;
+  }
+  @media screen and (max-width: 980px) {
+    max-width: 670px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    padding: 0;
+    grid-gap: 0;
+    gap: 0;
+  }
 `;
 
 const MainContentsLink = styled(Link)`
@@ -107,6 +120,13 @@ const MainContentsLink = styled(Link)`
   transition: 0.2s ease-in;
   color: inherit;
   text-decoration: none;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    border: none;
+    padding: 30px 25px 15px;
+    height: -webkit-fit-content;
+    height: fit-content;
+  }
 `;
 
 const MainContentsLi = styled.li`
@@ -219,7 +239,6 @@ const UserImg = styled.div`
   align-items: center;
   position: relative;
   img {
-    display: block;
     border-radius: 50%;
     object-fit: cover;
     width: 30px;

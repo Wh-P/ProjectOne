@@ -79,6 +79,18 @@ const BannerBlockWrap = styled.div`
 const BannerBlock = styled.div`
   outline: none;
   max-width: 1300px;
+  @media screen and (max-width: 1300px) {
+    max-width: 980px;
+  }
+  @media screen and (max-width: 980px) {
+    max-width: 670px;
+  }
+  @media screen and (max-width: 680px) {
+    max-width: 540px;
+  }
+  @media screen and (max-width: 540px) {
+    width: calc(100% - 40px);
+  }
 `;
 
 const Fragment = styled.div`
@@ -99,4 +111,7 @@ const BannerBlockArrow = styled.div`
   bottom: 25px;
   font-size: 14px;
   font-weight: 500;
+  @media screen and (max-width: 540px) {
+    display: none;
+  }
 `;
