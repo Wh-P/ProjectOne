@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const MypageDropBar: React.FC = () => {
+const HeaderMypageDropBar: React.FC = () => {
   const myPageText = ["내 작성글", "내 관심글", "설정", "로그아웃"];
 
   return (
@@ -15,7 +15,7 @@ const MypageDropBar: React.FC = () => {
   );
 };
 
-export default MypageDropBar;
+export default HeaderMypageDropBar;
 
 const MypageDropBarWrap = styled.div`
   position: absolute;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const AlarmDropBar: React.FC = () => {
+const HeaderAlarmDropBar: React.FC = () => {
   return (
     <AlarmDropBarWrap>
       <AlarmDropBarHeader>
@@ -10,7 +10,7 @@ const AlarmDropBar: React.FC = () => {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             viewBox="0 0 20 20"
             height="1em"
             width="1em"
@@ -25,7 +25,7 @@ const AlarmDropBar: React.FC = () => {
   );
 };
 
-export default AlarmDropBar;
+export default HeaderAlarmDropBar;
 
 const AlarmDropBarWrap = styled.div`
   cursor: default;
